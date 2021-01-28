@@ -149,7 +149,7 @@ class WebService
 
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_TIMEOUT, '3');
+            curl_setopt($ch, CURLOPT_TIMEOUT, '1');
             $content = trim(curl_exec($ch));
             curl_close($ch);
             
@@ -181,7 +181,7 @@ class WebService
             $url = 'http://widget.zoorate.com/go.php?function=feed&action=ws&task=merchant&merchant_code='.$feedaty_code;
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_TIMEOUT, '3');
+            curl_setopt($ch, CURLOPT_TIMEOUT, '1');
             $content = trim(curl_exec($ch));
             curl_close($ch);
 
@@ -214,7 +214,7 @@ class WebService
 
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_TIMEOUT, '2');
+        curl_setopt($ch, CURLOPT_TIMEOUT, '1');
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS,json_encode($data));
         curl_setopt($ch, CURLOPT_HTTPHEADER,['Content-Type: application/json', 'Authorization: Oauth '.$accessToken->AccessToken]);
@@ -362,7 +362,7 @@ class WebService
 
             curl_setopt($ch, CURLOPT_URL, $url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-            curl_setopt($ch, CURLOPT_TIMEOUT, '60');
+            curl_setopt($ch, CURLOPT_TIMEOUT, '1');
             $content = trim(curl_exec($ch));
             curl_close($ch);
 
@@ -405,7 +405,7 @@ class WebService
 
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_TIMEOUT, '60');
+        curl_setopt($ch, CURLOPT_TIMEOUT, '1');
         curl_setopt($ch, CURLOPT_POST, 1);
         curl_setopt($ch, CURLOPT_POSTFIELDS,json_encode($fdata));
         curl_setopt($ch, CURLOPT_HTTPHEADER,['Content-Type: application/json','Expect:']);
